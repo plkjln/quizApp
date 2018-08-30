@@ -1,0 +1,112 @@
+extends layout
+
+block content
+  h1 Quiz in #{title}
+  p 
+  h3 The Test
+  | The test contains 
+  <span id="totalQuestions" ></span> questions and there is no time limit.
+  | The test is not official, it's just a nice way to see how much you know, or don't know, about the jQuery library.
+
+  h3 Count Your Score
+  | You will get 1 point for each correct answer. 
+  | At the end of the Quiz, your total score will be displayed.
+
+  h3 Start the Quiz
+  | Good luck!
+  
+  // Wrapper
+  #wrapper
+    // TAKE QUIZ
+    h1 Lets start the Quiz
+    #quiz
+      #quizQuestions
+      input#inA(type="radio", class="optionsRadios", value="optionA",checked=false)
+      label#optionA(for="#in1", value="optionA")
+      br
+      input#inB(type="radio", class="optionsRadios", value="optionB",checked=false)
+      label#optionB(for="#in1", value="optionB")
+      br
+      input#inC(type="radio", class="optionsRadios", value="optionC",checked=false)
+      label#optionC(for="#in1", value="optionC")
+      br
+      input#inD(type="radio", class="optionsRadios", value="optionD",checked=false)
+      label#optionD(for="#in1", value="optionD")
+      br
+      br
+      button(class="Button")#nextQuestion Next
+      #myTextBox
+        input(type="hidden" name="TextBox" id="TextBox" value="1")
+      button(class="Button" hidden)#submitQuiz Results  
+      #results(style="hidden" width="30%") 
+      #score(style="hidden" width="25%")
+ 
+      br    
+    // /TAKE QUIZ
+
+    // QUESTIONS
+    #testQuestion
+      h1 Favourite Question
+      p
+        strong What is your fav language?
+        |  <span id='question'></span>
+        br
+        input#optionA(type="radio", class="optionsRadios", value="optionA",checked=false)
+        | JAVA
+        br
+        input#optionB(type="radio", class="optionsRadios", value="optionB",checked=false)
+        | ANGULAR
+        br
+        input#optionC(type="radio", class="optionsRadios", value="optionC",checked=false)
+        | C/C++
+        br
+        input#optionD(type="radio", class="optionsRadios", value="optionD",checked=false)
+        | Python
+        br
+        button(class="Button")#btnAnswer Submit
+        #answer(style="hidden" width="25%")
+          p
+            br    
+    // /QUESTIONS
+
+    // ADD QUESTION
+    h2 Add Your Questions here
+    #addQuestion
+      fieldset
+        label(for="#question", class="lblQuest") Your Question:
+        input#question(type='text', class="inputQuest", placeholder='type your question...')
+        br
+        label(for="#optionA",class="lblQuest") Option A:
+        input#optionA(type='text',class="inputQuest", placeholder='Answer 1...')
+        br
+        label(for="#optionB",class="lblQuest") Option B:
+        input#optionB(type='text',class="inputQuest", placeholder='Answer 2...')
+        br
+        label(for="#optionC",class="lblQuest") Option C:
+        input#optionC(type='text',class="inputQuest", placeholder='Answer 3...')
+        br
+        label(for="#optionD",class="lblQuest") Option D:
+        input#optionD(type='text',class="inputQuest", placeholder='Answer 4...')        
+        br
+        label(for="#inputCorrect",class="lblQuest") Please write the correct answer:
+        input#inputCorrect(type='text',class="inputQuest", placeholder='type your answer...' required)
+        br
+        br
+        button#btnAddQuestion Add Question
+    // /ADD QUESTION
+
+    // QUESTION LIST
+    h2 Question List
+    #questions
+      table
+        thead
+          th Question
+          th Option A
+          th Option B
+          th Option C
+          th Option D
+        tbody
+    // /QUESTION LIST
+
+
+  // /WRAPPER

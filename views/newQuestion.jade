@@ -1,0 +1,26 @@
+extends layout
+
+block content
+  h2 Add New Questions
+  form#addQuestion(name="addQuestion",method="post",action="/addQuestion")
+    fieldset
+      label(for="#question", class="lblQuest") Your Question:
+      input#question(type='text', class="inputQuest", placeholder='type your question...')
+      br
+      label(for="#optionA",class="lblQuest") Option A:
+      input#optionA(type='text',class="inputQuest", placeholder='Answer 1...')
+      br
+      label(for="#optionB",class="lblQuest") Option B:
+      input#optionB(type='text',class="inputQuest", placeholder='Answer 2...')
+      br
+      label(for="#optionC",class="lblQuest") Option C:
+      input#optionC(type='text',class="inputQuest", placeholder='Answer 3...')
+      br
+      label(for="#optionD",class="lblQuest") Option D:
+      input#optionD(type='text',class="inputQuest", placeholder='Answer 4...')        
+      br
+      label(for="#inputCorrect",class="lblQuest") Please write the correct answer:
+      input#inputCorrect(type='text',class="inputQuest", placeholder='type your answer...' required)
+      br
+      br
+      button#btnAddQuestion(type="submit") Add Question

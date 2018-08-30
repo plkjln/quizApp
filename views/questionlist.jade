@@ -1,0 +1,14 @@
+extends layout
+
+block content
+  h1 Question List
+  form#questionlist(name="questionlist",method="get",action="/questionlist")
+      table
+        thead
+          th Question
+          th Option A
+          th Option B
+          th Option C
+          th Option D
+        tbody
+      

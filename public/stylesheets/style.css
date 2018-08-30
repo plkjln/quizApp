@@ -1,0 +1,155 @@
+@import url(https://fonts.googleapis.com/css?family=Work+Sans:300,600);
+body {
+  padding: 50px;
+	font: 20px 'Work Sans', Helvetica, Arial, sans-serif;
+	color: #333;
+	background-color: #f8f6f0;
+}
+
+a {
+  color: #00B7FF;
+}
+h1{
+	font-weight: 300;
+	text-align: center;
+  margin: 0px;
+  padding: 10px;
+  font-size: 20px;
+  background-color: #444;
+  color: #fff;
+}
+
+#quizQuestions {
+	font-size: 30px;
+	margin-bottom: 10px;
+}
+	#quizQuestions label{
+  	display: block;
+  	margin-bottom: 10px;
+	}
+	#testQuestion p{
+		margin-bottom: 10px;
+	}
+	#testQuestion p label{
+		display: block;
+		margin-bottom: 10px;
+	}
+
+.optionsRadios {
+  margin-bottom: 10px;
+  text-align: left;
+  display: inline-block;
+}
+	.optionsRadios label{
+  	display: block;
+  	margin-bottom: 10px;
+	}
+
+.optionsRadios1 {
+	margin-bottom: 10px;
+	text-align: left;
+	display: inline-block;
+}
+	.optionsRadios1 label{
+		display: block;
+		margin-bottom: 10px;
+	}
+
+#addQuestion {
+  margin: 0 auto;
+  max-width: 950px;
+  padding-bottom: 20px;
+  padding-top: 5px;
+}
+	#addQuestion .lblQuest {
+  	display: inline-block;
+  	width: 25%;
+  	vertical-align: top;
+  	margin-top: 10px;
+	}
+	#addQuestion .inputQuest {
+ 		height: 25px;
+  	width: 70%;
+  	margin: 10px;
+	}
+
+#questionlist {
+	margin:0 0 30px 0;
+}
+  #questionlist table {
+		border-collapse:separate;
+		border-spacing:1px;
+		background:#CCC;
+	}
+		#questionlist table th {
+			background:#EEE;
+			font-weight:600;
+			padding:10px 20px;
+			text-align:center;
+		}
+		#questionlist table tbody {
+			padding:0; margin:0;
+			border-collapse:collapse;
+			border-spacing:0px;
+		}
+			#questionlist table td {
+				background:#FFF;
+				padding:5px 10px;
+				text-align:center;
+			}
+			
+fieldset {
+  border:0;
+  padding:0; margin:0;
+}      
+
+#answer {
+		display: none;
+    position:block;
+		width: 25%;
+		margin-bottom: 20px;
+		border-radius: 3px;
+		padding: 10px;
+}
+  #answer input#optionB:checked  {
+    background-color: rgb(26, 224, 42)!important;
+	}
+	#answer input#optionA:checked  {
+		background-color: rgb(238, 17, 17)!important;
+	}
+	#answer input#optionB:checked  {
+		background-color: rgb(238, 17, 17)!important;
+	}
+	#answer input#optionC:checked  {
+		background-color: rgb(238, 17, 17)!important;
+	}
+
+#results {
+		display: none;
+		position:block;
+		margin-bottom: 10px;
+}	
+
+#score {
+	display: none;
+	position:block;
+	width: 40%;
+	margin-bottom: 20px;
+	border-radius: 3px;
+	padding: 10px;
+}
+
+button{
+	font-family: 'Work Sans', sans-serif;
+	font-size: 20px;
+	background-color: #279;
+	color: #fff;
+	border: 0px;
+	border-radius: 3px;
+	padding: 8px;
+	cursor: pointer;
+	margin-bottom: 10px;
+}
+button:hover{
+	background-color: #38a;
+}	
